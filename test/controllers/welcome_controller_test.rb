@@ -6,4 +6,9 @@ class WelcomeControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "can see the welcome page" do
+    get welcome_index_url
+    assert_select "h1", "Welcome Circle"
+  end
+
 end
